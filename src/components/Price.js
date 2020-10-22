@@ -1,7 +1,11 @@
 import React from 'react';
+import styled from 'styled-components';
 
-const Price = ({ price }) => {
-  return <div>$ {price}</div>;
-};
+const PriceHolder = styled.div`
+  font-size: 1.2rem;
+  ${({ styles }) => styles}
+`;
 
-export default Price;
+export default function Price({ price, styles }) {
+  return <PriceHolder styles={styles}>$ {price}</PriceHolder>;
+}

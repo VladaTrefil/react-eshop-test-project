@@ -1,5 +1,17 @@
 import React from 'react';
+import styled from 'styled-components';
 import ProductCard from './ProductCard';
+
+const Grid = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -${(30 / 1080) * 100}%;
+`;
+
+const Cell = styled.div`
+  width: ${(320 / 1140) * 100}%;
+  margin: 0 ${(30 / 1140) * 100}% 60px;
+`;
 
 export default class ProductGrid extends React.Component {
   state = {
@@ -8,11 +20,13 @@ export default class ProductGrid extends React.Component {
 
   render() {
     return (
-      <div>
+      <Grid>
         {this.state.products.map((product) => (
-          <ProductCard key={product.id} product={product} onAddButtonClick={this.props.addToCart} />
+          <Cell key={product.id}>
+            <ProductCard product={product} onAddButtonClick={this.props.addToCart} />
+          </Cell>
         ))}
-      </div>
+      </Grid>
     );
   }
 }

@@ -27,6 +27,12 @@ const plugins = [
   // new webpack.LoaderOptionsPlugin({ options: { postcss: [autoprefixer()] } }),
 ];
 
+const resolve = {
+  modulesDirectories: ['node_modules'],
+  alias: {},
+  extensions: ['', '.jsx', '.js'],
+};
+
 // Javascript
 const jsModule = {
   test: /\.(js)$/,
