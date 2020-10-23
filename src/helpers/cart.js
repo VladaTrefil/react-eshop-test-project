@@ -38,7 +38,7 @@ export const removeFromCart = ({ id, removeQuantity }, cart) => {
   return newCart;
 };
 
-export const getCartTotalPrice = (cart) => {
+export const getCartSubtotal = (cart) => {
   if (cart.length) {
     return cart.map(({ product, quantity }) => product.price * quantity).reduce((a, b) => a + b);
   } else {

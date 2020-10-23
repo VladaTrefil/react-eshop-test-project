@@ -1,7 +1,22 @@
 import React from 'react';
+import styled from 'styled-components';
 import { useUserState } from '../context/user';
-
 import CheckoutItem from './CheckoutItem';
+import SubTotal from './SubTotal';
+
+const Table = styled.table`
+  width: 100%;
+  border-collapse: collapse;
+  vertical-align: top;
+`;
+
+const Head = styled.thead`
+  border-bottom: 1px solid grey;
+`;
+
+const Cell = styled.td`
+  padding: 20px;
+`;
 
 export default function CheckoutTable() {
   const [{ id, cart }, dispach] = useUserState();
@@ -13,26 +28,31 @@ export default function CheckoutTable() {
     });
   };
 
+  console.log(cart);
   return (
-    <table>
-      <thead>
+    <Table>
+      <Head>
         <tr>
-          <td></td>
-          <td>Name</td>
-          <td>Quantity</td>
-          <td>Price/1</td>
-          <td>Price total</td>
+          <Cell></Cell>
+          <Cell>Name</Cell>
+          <Cell>Quantity</Cell>
+          <Cell>Price/1</Cell>
+          <Cell>Price total</Cell>
+          <Cell></Cell>
         </tr>
-      </thead>
+      </Head>
       <tbody>
         {cart.map(({ product, quantity }) => (
           <CheckoutItem key={product.id} product={product} quantity={quantity} />
         ))}
         <tr>
-          <td></td>
-          {/* <td colSpan="3">total sum: $ {getTotalPrice()}</td> */}
+          <Cell colspan="4"></Cell>
+          <Cell>
+            <SubTotal />
+          </Cell>
+          <Cell></Cell>
         </tr>
       </tbody>
-    </table>
+    </Table>
   );
 }

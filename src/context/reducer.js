@@ -2,7 +2,22 @@ import { addToCart, removeFromCart } from '../helpers/cart';
 
 export const initialState = {
   id: null,
-  cart: [],
+  cart: [
+    {
+      product: {
+        id: '1',
+        slug: '1',
+        name: 'Mountains 1',
+        category: 'winter',
+        price: 1000,
+        stock: 5,
+        images: {
+          thumbnail: require('../images/products/1/thumbnail.jpg').default,
+        },
+      },
+      quantity: 1,
+    },
+  ],
 };
 
 export const reducer = (state, action) => {
