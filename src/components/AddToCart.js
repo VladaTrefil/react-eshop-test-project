@@ -1,6 +1,6 @@
 import React from 'react';
 import { useUserState } from '../context/user';
-import Button from './Button';
+import { Button } from './styled';
 
 const AddToCart = ({ id }) => {
   const [{ ...cart }, dispach] = useUserState();

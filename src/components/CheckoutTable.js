@@ -2,20 +2,34 @@ import React from 'react';
 import styled from 'styled-components';
 import { useUserState } from '../context/user';
 import CheckoutItem from './CheckoutItem';
-import SubTotal from './SubTotal';
 
 const Table = styled.table`
   width: 100%;
   border-collapse: collapse;
   vertical-align: top;
+  text-align: center;
 `;
 
 const Head = styled.thead`
-  border-bottom: 1px solid grey;
+  background: ${({ theme }) => theme.colors.dark};
+  color: ${({ theme }) => theme.colors.light};
 `;
 
+const Body = styled.tbody``;
+
 const Cell = styled.td`
-  padding: 20px;
+  padding: 10px;
+
+  &:nth-child(1) {
+    width: 120px;
+  }
+
+  &:nth-child(2) {
+    width: 150px;
+    text-align: left;
+    padding-left: 20px;
+    font-weight: 500;
+  }
 `;
 
 export default function CheckoutTable() {
@@ -28,7 +42,6 @@ export default function CheckoutTable() {
     });
   };
 
-  console.log(cart);
   return (
     <Table>
       <Head>
@@ -41,18 +54,17 @@ export default function CheckoutTable() {
           <Cell></Cell>
         </tr>
       </Head>
-      <tbody>
+      <Body>
         {cart.map(({ product, quantity }) => (
-          <CheckoutItem key={product.id} product={product} quantity={quantity} />
+          <CheckoutItem
+            key={product.id}
+            product={product}
+            quantity={quantity}
+            Cell={Cell}
+            removeFromCart={removeFromCart}
+          />
         ))}
-        <tr>
-          <Cell colspan="4"></Cell>
-          <Cell>
-            <SubTotal />
-          </Cell>
-          <Cell></Cell>
-        </tr>
-      </tbody>
+      </Body>
     </Table>
   );
 }

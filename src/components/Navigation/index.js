@@ -1,17 +1,24 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { List, Link } from './styles';
+import { Container, List, Link, NavIcons } from './styles';
+import CartStatus from '../CartStatus';
 
 const Navigation = () => {
   return (
-    <List>
-      <NavLink to="/products">
-        <Link>Our Products</Link>
-      </NavLink>
-      <NavLink to="/products">
-        <Link>Contacts</Link>
-      </NavLink>
-    </List>
+    <Container>
+      <List>
+        <NavLink to="/products">
+          <Link>Products</Link>
+        </NavLink>
+        <NavLink to="/products">
+          <Link>Contacts</Link>
+        </NavLink>
+      </List>
+
+      <NavIcons>
+        <CartStatus />
+      </NavIcons>
+    </Container>
   );
 };
 

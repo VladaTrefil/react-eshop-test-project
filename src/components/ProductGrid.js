@@ -23,7 +23,7 @@ export default class ProductGrid extends React.Component {
       <Grid>
         {this.state.products.map((product) => (
           <Cell key={product.id}>
-            <ProductCard product={product} onAddButtonClick={this.props.addToCart} />
+            <ProductCard product={product} />
           </Cell>
         ))}
       </Grid>

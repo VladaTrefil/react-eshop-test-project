@@ -1,21 +1,28 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useUserState } from '../context/user';
+import { AiOutlineClose } from 'react-icons/ai';
 import Thumbnail from './Thumbnail';
-
-const Cell = styled.td`
-  vertical-align: top;
-  padding: 40px 20px 10px;
-`;
+import Icon from './Icon';
 
 const ThumbnailCell = styled.td`
   width: 120px;
   padding-top: 30px;
 `;
 
-const NameCell = styled(Cell)``;
+const RemoveButton = styled.button`
+  display: flex;
+  padding: 5px;
+  background: ${({ theme }) => theme.colors.dark};
+  color: ${({ theme }) => theme.colors.light};
+  transition: background 300ms, color 300ms;
 
-export default function CheckoutItem({ product, quantity }) {
+  &:hover {
+    background: ${({ theme }) => theme.colors.red};
+    color: ${({ theme }) => theme.colors.light};
+  }
+`;
+
+export default function CheckoutItem({ product, quantity, Cell, removeFromCart }) {
   return (
     <tr>
       <ThumbnailCell>
@@ -26,7 +33,11 @@ export default function CheckoutItem({ product, quantity }) {
       <Cell>$ {product.price}</Cell>
       <Cell>$ {product.price * quantity}</Cell>
       <Cell>
-        <button onClick={() => removeFromCart(product.id, 1)}>x</button>
+        <RemoveButton onClick={() => removeFromCart(product.id, 1)}>
+          <Icon>
+            <AiOutlineClose />
+          </Icon>
+        </RemoveButton>
       </Cell>
     </tr>
   );

@@ -1,11 +1,11 @@
 import React from 'react';
-import { Wrapper } from '../components/Wrapper';
+import { Wrapper, PageTitle } from '../components/styled';
 
 export default class Homepage extends React.Component {
   render() {
     return (
       <Wrapper>
-        <h1>Homepage</h1>
+        <PageTitle>Homepage</PageTitle>
       </Wrapper>
     );
   }

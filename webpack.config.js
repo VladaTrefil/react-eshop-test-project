@@ -42,13 +42,8 @@ const jsModule = {
 
 // Stylus
 const stylModule = {
-  test: /\.styl$/,
-  use: [
-    { loader: 'style-loader' },
-    { loader: 'css-loader' },
-    // { loader: 'postcss-loader' },
-    { loader: 'stylus-loader', options: { sourceMap: true, stylusOptions: { includeCSS: true } } },
-  ],
+  test: /\.css/,
+  use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
 };
 
 // Images

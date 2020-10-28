@@ -16,6 +16,6 @@ const IconHolder = styled.div`
   }
 `;
 
-export default function Icon({ iconComponent, size = 1 }) {
-  return <IconHolder size={size}>{iconComponent}</IconHolder>;
+export default function Icon({ size = 1, children }) {
+  return <IconHolder size={size}>{children}</IconHolder>;
 }
