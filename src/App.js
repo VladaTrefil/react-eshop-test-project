@@ -2,6 +2,8 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 import PRODUCTS from './product-list';
 
+import Theme from './context/theme';
+import GlobalStyle from './components/GlobalStyle';
 import Header from './components/Header';
 import Homepage from './pages/Homepage';
 import Products from './pages/Products';
@@ -13,8 +15,8 @@ import { reducer, initialState } from './context/reducer';
 export default class App extends React.Component {
   render() {
     return (
-      <UserProvider reducer={reducer} initialState={initialState}>
-        <div>
+      <Theme>
+        <GlobalStyle />
           <Header />
           <div>
             <Switch>
@@ -28,7 +30,7 @@ export default class App extends React.Component {
                 <Homepage />
               </Route>
             </Switch>
-          </div>
+      </Theme>
         </div>
       </UserProvider>
     );
