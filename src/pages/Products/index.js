@@ -1,8 +1,8 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
 import { Wrapper, PageTitle, FilterHolder } from './styles';
-import Filter from '../../components/Filter';
-import ProductGrid from '../../components/ProductGrid';
+import Filter from '#/Filter';
+import ProductGrid from '#/ProductGrid';
 
 const Products = ({ products, categories }) => {
   const { category } = useParams();

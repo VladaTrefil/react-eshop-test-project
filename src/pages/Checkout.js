@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Wrapper, PageTitle } from '../components/styled';
-import CheckoutTable from '../components/CheckoutTable';
-import CheckoutSummary from '../components/CheckoutSummary';
+import { Wrapper, PageTitle } from '#/styled';
+import CheckoutTable from '#/CheckoutTable';
+import CheckoutSummary from '#/CheckoutSummary';
 
 const Inner = styled.div`
   display: flex;

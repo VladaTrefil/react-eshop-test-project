@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useUserState } from '../context/user';
-import { getCartSubtotal } from '../helpers/cart';
+import { useUserState } from '~/context/user';
+import { getCartSubtotal } from '~/helpers/cart';
 
 const PriceHolder = styled.div`
   padding: 20px;

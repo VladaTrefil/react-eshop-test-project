@@ -1,5 +1,5 @@
 import React from 'react';
-import { useUserState } from '../context/user';
+import { useUserState } from '~/context/user';
 import { Button } from './styled';
 
 const AddToCart = ({ id }) => {

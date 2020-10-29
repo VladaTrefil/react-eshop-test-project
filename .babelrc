@@ -1,7 +1,22 @@
 {
   "presets": ["@babel/env", "@babel/react"],
   "plugins": [
+    [
+      "root-import",
+      {
+        "paths": [
+          {
+            "rootPathSuffix": "./src",
+            "rootPathPrefix": "~/"
+          },
+          {
+            "rootPathSuffix": "./src/components",
+            "rootPathPrefix": "#/"
+          },
+        ]
+      }
+    ],
     "@babel/syntax-dynamic-import", 
-    "@babel/proposal-class-properties"
-    ]
+    "@babel/proposal-class-properties",
+  ]
 }

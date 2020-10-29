@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-import { useUserState } from '../context/user';
-import CheckoutItem from './CheckoutItem';
+import { useUserState } from '~/context/user';
+import CheckoutItem from '#/CheckoutItem';
 
 const Table = styled.table`
   width: 100%;

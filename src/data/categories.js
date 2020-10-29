@@ -1,4 +1,4 @@
-import generateID from '../helpers/generateID';
+import generateID from '~/helpers/generateID';
 
 export default [
   {

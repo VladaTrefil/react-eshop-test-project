@@ -1,9 +1,9 @@
 import React from 'react';
 import { useParams } from 'react-router-dom';
-import { getProductBySlug } from '../helpers/products';
+import { getProductBySlug } from '~/helpers/products';
 import styled from 'styled-components';
-import ProductPhotos from '../components/ProductPhotos';
-import ProductInfo from '../components/ProductInfo';
+import ProductPhotos from '#/ProductPhotos';
+import ProductInfo from '#/ProductInfo';
 
 const Inner = styled.div`
   display: flex;

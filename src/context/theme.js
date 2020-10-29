@@ -1,6 +1,6 @@
 import React from 'react';
 import { ThemeProvider } from 'styled-components';
-import theme from '../data/theme';
+import theme from '~/data/theme';
 
 const Theme = ({ children }) => <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 

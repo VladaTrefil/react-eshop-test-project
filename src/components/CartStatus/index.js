@@ -1,9 +1,9 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
-import { useUserState } from '../../context/user';
+import { useUserState } from '~/context/user';
 import { FaShoppingCart } from 'react-icons/fa';
 import { Container, Number } from './styles';
-import Icon from '../Icon';
+import Icon from '#/Icon';
 
 export default function CartStatus() {
   const [{ id, cart }, dispach] = useUserState();

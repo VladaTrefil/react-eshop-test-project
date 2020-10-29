@@ -1,7 +1,7 @@
 import React from 'react';
 import { LogoHolder, LogoName } from './styles';
 import { FaShoppingBasket } from 'react-icons/fa';
-import Icon from '../Icon';
+import Icon from '#/Icon';
 
 const AppLogo = () => (
   <LogoHolder>

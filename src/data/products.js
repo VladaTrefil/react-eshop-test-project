@@ -1,5 +1,5 @@
-import generateID from '../helpers/generateID';
-import { getCategoryBySlug } from '../helpers/categories';
+import generateID from '~/helpers/generateID';
+import { getCategoryBySlug } from '~/helpers/categories';
 
 export default [
   {
@@ -17,8 +17,8 @@ export default [
     price: 50,
     stock: 5,
     images: {
-      thumbnail: require('../images/products/F33527/thumbnail.png').default,
-      main: require('../images/products/F33527/main.png').default,
+      thumbnail: require('~/images/products/F33527/thumbnail.png').default,
+      main: require('~/images/products/F33527/main.png').default,
     },
   },
   {
@@ -36,8 +36,8 @@ export default [
     price: 100,
     stock: 3,
     images: {
-      thumbnail: require('../images/products/JWCOAT/thumbnail.png').default,
-      main: require('../images/products/JWCOAT/main.png').default,
+      thumbnail: require('~/images/products/JWCOAT/thumbnail.png').default,
+      main: require('~/images/products/JWCOAT/main.png').default,
     },
   },
 ];

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Button } from './styled';
-import SubTotal from './SubTotal';
+import SubTotal from '#/SubTotal';
 
 const Container = styled.div`
   display: flex;

@@ -1,8 +1,8 @@
 import React from 'react';
 import styled from 'styled-components';
 import { AiOutlineClose } from 'react-icons/ai';
-import Thumbnail from './Thumbnail';
-import Icon from './Icon';
+import Thumbnail from '#/Thumbnail';
+import Icon from '#/Icon';
 
 const ThumbnailCell = styled.td`
   width: 120px;

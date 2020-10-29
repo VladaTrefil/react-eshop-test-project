@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import { Container, List, Link, NavIcons } from './styles';
-import CartStatus from '../CartStatus';
+import CartStatus from '#/CartStatus';
 
 const Navigation = () => {
   return (

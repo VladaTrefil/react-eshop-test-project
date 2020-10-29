@@ -1,4 +1,4 @@
-import PRODUCTS from '../data/products';
+import PRODUCTS from '~/data/products';
 
 export const addToCart = ({ id, quantity }, cart) => {
   const product = PRODUCTS.filter((product) => product.id === id)[0];

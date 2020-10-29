@@ -1,4 +1,4 @@
-import { addToCart, removeFromCart } from '../helpers/cart';
+import { addToCart, removeFromCart } from '~/helpers/cart';
 
 export const initialState = {
   id: null,
@@ -12,7 +12,7 @@ export const initialState = {
         price: 1000,
         stock: 5,
         images: {
-          thumbnail: require('../images/products/1/thumbnail.jpg').default,
+          thumbnail: require('~/images/products/1/thumbnail.jpg').default,
         },
       },
       quantity: 1,
