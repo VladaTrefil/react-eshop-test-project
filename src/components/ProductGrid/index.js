@@ -1,22 +1,11 @@
-import React from 'react';
-import styled from 'styled-components';
-import ProductCard from '#/ProductCard';
-
-const Grid = styled.div`
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -${(30 / 1080) * 100}%;
-`;
-
-const Cell = styled.div`
-  width: ${(320 / 1140) * 100}%;
-  margin: 0 ${(30 / 1140) * 100}% 60px;
-`;
+import React from 'react'
+import { Grid, Cell } from './styles'
+import ProductCard from '#/ProductCard'
 
 export default class ProductGrid extends React.Component {
   state = {
     products: this.props.products,
-  };
+  }
 
   render() {
     return (
@@ -27,6 +16,6 @@ export default class ProductGrid extends React.Component {
           </Cell>
         ))}
       </Grid>
-    );
+    )
   }
 }

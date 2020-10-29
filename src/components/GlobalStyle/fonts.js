@@ -1,9 +1,9 @@
-import Regular from '~/fonts/Montserrat/Regular.ttf';
-import Italic from '~/fonts/Montserrat/Italic.ttf';
-import Medium from '~/fonts/Montserrat/Medium.ttf';
-import MediumItalic from '~/fonts/Montserrat/MediumItalic.ttf';
-import Bold from '~/fonts/Montserrat/Bold.ttf';
-import Black from '~/fonts/Montserrat/Black.ttf';
+import Regular from "~/fonts/Montserrat/Regular.ttf";
+import Italic from "~/fonts/Montserrat/Italic.ttf";
+import Medium from "~/fonts/Montserrat/Medium.ttf";
+import MediumItalic from "~/fonts/Montserrat/MediumItalic.ttf";
+import Bold from "~/fonts/Montserrat/Bold.ttf";
+import Black from "~/fonts/Montserrat/Black.ttf";
 
 const fontFace = `
   @font-face {

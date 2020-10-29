@@ -1,9 +1,8 @@
-import React from 'react';
-import { Card, Description, Title } from './styles';
+import React from "react";
+import { Card, Description, Title } from "./styles";
 
-import Thumbnail from '#/Thumbnail';
-import Price from '#/Price';
-import AddToCart from '#/AddToCart';
+import Thumbnail from "#/Thumbnail";
+import Price from "#/Price";
 
 const ProductCard = ({ product }) => {
   return (

@@ -1,7 +1,6 @@
-import React from 'react';
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-const ImageHolder = styled.div`
+export const ImageHolder = styled.div`
   width: 100%;
   position: relative;
   overflow: hidden;
@@ -23,9 +22,9 @@ const ImageHolder = styled.div`
   }
 
   ${({ styles }) => styles}
-`;
+`
 
-const Image = styled.img`
+export const Image = styled.img`
   max-width: 80%;
   max-height: 90%;
   transform: translate(-50%, -50%);
@@ -33,12 +32,4 @@ const Image = styled.img`
   top: 50%;
   left: 50%;
   z-index: 2;
-`;
-
-export default function Thumbnail({ src, styles }) {
-  return (
-    <ImageHolder styles={styles}>
-      <Image src={src} />
-    </ImageHolder>
-  );
-}
+`

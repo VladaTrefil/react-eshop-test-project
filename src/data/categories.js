@@ -1,14 +1,14 @@
-import generateID from '~/helpers/generateID';
+import generateID from "~/helpers/generateID";
 
 export default [
   {
     id: generateID(),
-    name: 'Shoes',
-    slug: 'shoes',
+    name: "Shoes",
+    slug: "shoes",
   },
   {
     id: generateID(),
-    name: 'Jacket',
-    slug: 'jacket',
+    name: "Jacket",
+    slug: "jacket",
   },
 ];

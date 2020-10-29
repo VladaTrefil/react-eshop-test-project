@@ -1,8 +1,7 @@
-import React from 'react';
-import { Container, ImageHolder, Image } from './styles';
+import React from "react";
+import { Container, ImageHolder, Image } from "./styles";
 
 const ProductPhotos = ({ images }) => {
-  console.log(images);
   return (
     <Container>
       <ImageHolder>

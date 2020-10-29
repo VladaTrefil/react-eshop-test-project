@@ -1,7 +1,13 @@
-import styled from 'styled-components';
+import styled from 'styled-components'
 
-export { Wrapper, PageTitle } from '#/styled';
+export const Wrapper = styled.div`
+  ${({ theme }) => theme.elements.wrapper}
+`
+
+export const PageTitle = styled.div`
+  ${({ theme }) => theme.elements.pageTitle}
+`
 
 export const FilterHolder = styled.div`
   margin-bottom: 40px;
-`;
+`

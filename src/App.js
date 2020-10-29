@@ -3,7 +3,7 @@ import { Switch, Route } from 'react-router-dom'
 import PRODUCTS from '~/data/products'
 import CATEGORIES from '~/data/categories'
 
-import Theme from '~/context/theme'
+import Theme from '~/context/themeProvider'
 import GlobalStyle from '#/GlobalStyle'
 
 import CartSidebar from '#/CartSidebar'

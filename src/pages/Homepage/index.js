@@ -1,5 +1,5 @@
-import React from 'react';
-import { Wrapper, PageTitle } from '#/styled';
+import React from 'react'
+import { Wrapper, PageTitle } from './styles'
 
 export default class Homepage extends React.Component {
   render() {
@@ -7,6 +7,6 @@ export default class Homepage extends React.Component {
       <Wrapper>
         <PageTitle>Homepage</PageTitle>
       </Wrapper>
-    );
+    )
   }
 }

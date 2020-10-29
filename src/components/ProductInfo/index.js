@@ -1,9 +1,17 @@
-import React from 'react';
-import AddToCart from '#/AddToCart';
-import Price from '#/Price';
-import { Container, Title, Description, Row, Stock, Brand } from './styles';
+import React from "react";
+import AddToCart from "#/AddToCart";
+import Price from "#/Price";
+import { Container, Title, Description, Row, Stock, Brand } from "./styles";
 
-const ProductInfo = ({ id, name, category, brand, price, stock, description }) => {
+const ProductInfo = ({
+  id,
+  name,
+  category,
+  brand,
+  price,
+  stock,
+  description,
+}) => {
   return (
     <Container>
       <Brand>{brand}</Brand>

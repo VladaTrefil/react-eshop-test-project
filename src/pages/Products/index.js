@@ -1,11 +1,11 @@
-import React from 'react';
-import { useParams } from 'react-router-dom';
-import { Wrapper, PageTitle, FilterHolder } from './styles';
-import Filter from '#/Filter';
-import ProductGrid from '#/ProductGrid';
+import React from 'react'
+import { useParams } from 'react-router-dom'
+import { Wrapper, PageTitle, FilterHolder } from './styles'
+import Filter from '#/Filter'
+import ProductGrid from '#/ProductGrid'
 
 const Products = ({ products, categories }) => {
-  const { category } = useParams();
+  const { category } = useParams()
 
   return (
     <Wrapper>
@@ -13,7 +13,7 @@ const Products = ({ products, categories }) => {
       <Filter categories={categories} />
       <ProductGrid products={products} />
     </Wrapper>
-  );
-};
+  )
+}
 
-export default Products;
+export default Products

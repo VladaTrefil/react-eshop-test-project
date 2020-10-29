@@ -1,4 +1,4 @@
-import PRODUCTS from '~/data/products';
+import PRODUCTS from "~/data/products";
 
 export const addToCart = ({ id, quantity }, cart) => {
   const product = PRODUCTS.filter((product) => product.id === id)[0];
@@ -8,7 +8,9 @@ export const addToCart = ({ id, quantity }, cart) => {
     newCart = [{ product, quantity: quantity }, ...cart];
   } else {
     newCart = cart.map((entry) =>
-      entry.product.id === product.id ? Object.assign(entry, { quantity: entry.quantity + quantity }) : entry
+      entry.product.id === product.id
+        ? Object.assign(entry, { quantity: entry.quantity + quantity })
+        : entry
     );
   }
 
@@ -40,7 +42,19 @@ export const removeFromCart = ({ id, removeQuantity }, cart) => {
 
 export const getCartSubtotal = (cart) => {
   if (cart.length) {
-    return cart.map(({ product, quantity }) => product.price * quantity).reduce((a, b) => a + b);
+    return cart
+      .map(({ product, quantity }) => product.price * quantity)
+      .reduce((a, b) => a + b);
+  } else {
+    return 0;
+  }
+};
+
+export const getCartSize = (cart) => {
+  if (cart.length) {
+    let cartSize = 0;
+    cart.map(({ product, quantity }) => (cartSize += quantity));
+    return cartSize;
   } else {
     return 0;
   }

@@ -1,5 +1,5 @@
-import React from 'react';
-import { Container, List, Label, Item } from './styles';
+import React from 'react'
+import { Container, List, Label, Item } from './styles'
 
 const Filter = ({ categories }) => {
   return (
@@ -13,7 +13,7 @@ const Filter = ({ categories }) => {
         ))}
       </List>
     </Container>
-  );
-};
+  )
+}
 
-export default Filter;
+export default Filter
