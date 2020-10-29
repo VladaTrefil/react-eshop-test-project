@@ -1,22 +1,25 @@
-import React from 'react';
-import { Switch, Route } from 'react-router-dom';
-import PRODUCTS from '~/data/products';
-import CATEGORIES from '~/data/categories';
+import React from 'react'
+import { Switch, Route } from 'react-router-dom'
+import PRODUCTS from '~/data/products'
+import CATEGORIES from '~/data/categories'
 
-import Theme from '~/context/theme';
-import GlobalStyle from '#/GlobalStyle';
+import Theme from '~/context/theme'
+import GlobalStyle from '#/GlobalStyle'
 
-import Header from '#/Header';
-import Homepage from '~/pages/Homepage';
-import Products from '~/pages/Products';
-import Checkout from '~/pages/Checkout';
-import ProductDetail from '~/pages/ProductDetail';
+import CartSidebar from '#/CartSidebar'
+import Header from '#/Header'
+import Homepage from '~/pages/Homepage'
+import Products from '~/pages/Products'
+import Checkout from '~/pages/Checkout'
+import ProductDetail from '~/pages/ProductDetail'
 
 export default class App extends React.Component {
   render() {
     return (
       <Theme>
         <GlobalStyle />
+
+        <CartSidebar />
 
         <Header />
 
@@ -38,6 +41,6 @@ export default class App extends React.Component {
           </Route>
         </Switch>
       </Theme>
-    );
+    )
   }
 }

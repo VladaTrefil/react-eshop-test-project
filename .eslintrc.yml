@@ -1,0 +1,29 @@
+env:
+  node: true
+  es6: true
+  browser: true
+  es2021: true
+extends:
+  - 'standard'
+  - 'eslint:recommended'
+  - 'plugin:react/recommended'
+parserOptions:
+  ecmaFeatures:
+    jsx: true
+  ecmaVersion: 12
+  sourceType: module
+plugins:
+  - react
+  - import
+  - prettier
+  - standard
+rules: {
+  react/prop-types: 0,
+  no-unused-vars: 1,
+  new-cap: 0,
+  space-before-function-paren: 0,
+  comma-dangle: 0
+}
+settings: {
+  import/resolver: babel-plugin-root-import
+}
