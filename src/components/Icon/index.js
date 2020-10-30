@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React from 'react'
+import styled from 'styled-components'
 
 const IconHolder = styled.div`
   display: inline-block;
@@ -14,8 +14,8 @@ const IconHolder = styled.div`
     left: 50%;
     transform: translate(-50%, -50%);
   }
-`;
+`
 
 export default function Icon({ size = 1, children }) {
-  return <IconHolder size={size}>{children}</IconHolder>;
+  return <IconHolder size={size}>{children}</IconHolder>
 }

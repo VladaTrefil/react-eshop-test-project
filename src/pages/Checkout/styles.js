@@ -14,10 +14,10 @@ export const Inner = styled.div`
 `
 
 export const Main = styled.div`
-  width: calc(70% - 60px);
-  margin-right 60px;
+  width: calc(65% - 30px);
+  margin-right 30px;
 `
 
 export const Sub = styled.div`
-  width: 30%;
+  width: 35%;
 `

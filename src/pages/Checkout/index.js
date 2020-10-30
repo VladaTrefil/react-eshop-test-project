@@ -3,11 +3,11 @@ import { Wrapper, PageTitle, Inner, Main, Sub } from './styles'
 import CheckoutTable from '#/CheckoutTable'
 import CheckoutSummary from '#/CheckoutSummary'
 
-export default function Checkout() {
+const Checkout = () => {
   return (
     <Wrapper>
       <Inner>
-        <PageTitle>Cart</PageTitle>
+        <PageTitle>Checkout</PageTitle>
         <Main>
           <CheckoutTable />
         </Main>
@@ -18,3 +18,5 @@ export default function Checkout() {
     </Wrapper>
   )
 }
+
+export default Checkout

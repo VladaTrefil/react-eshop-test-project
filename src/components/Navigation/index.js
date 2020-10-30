@@ -1,9 +1,9 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
-import { Container, List, Link, NavIcons } from "./styles";
-import CartStatus from "#/CartStatus";
+import React from 'react'
+import { NavLink } from 'react-router-dom'
+import { Container, List, Link, NavIcons } from './styles'
+import CartStatus from '#/CartStatus'
 
-const Navigation = () => {
+const Navigation = ({ openCartSidebar }) => {
   return (
     <Container>
       <List>
@@ -16,10 +16,10 @@ const Navigation = () => {
       </List>
 
       <NavIcons>
-        <CartStatus />
+        <CartStatus openCartSidebar={openCartSidebar} />
       </NavIcons>
     </Container>
-  );
-};
+  )
+}
 
-export default Navigation;
+export default Navigation
