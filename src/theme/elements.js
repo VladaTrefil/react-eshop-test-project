@@ -31,8 +31,23 @@ const button = css`
   }
 `
 
+const icon = css`
+  display: inline-block;
+  position: relative;
+
+  svg {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+  }
+`
+
 export default {
   wrapper,
   pageTitle,
   button,
+  icon,
 }
