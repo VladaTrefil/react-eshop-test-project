@@ -26,9 +26,7 @@ const CartSidebar = ({ isOpen, closeCartSidebar }) => {
         </Top>
         <Bottom>
           <SubTotal />
-          <GoToCheckout to="/checkout" onClick={closeCartSidebar}>
-            Go to Checkout
-          </GoToCheckout>
+          <GoToCheckout to="/checkout">Go to Checkout</GoToCheckout>
         </Bottom>
       </Inner>
     </Container>

@@ -10,6 +10,7 @@ export default {
   },
   zindex: {
     sidebar: 100,
+    overlay: 50,
   },
   fontSize: {
     secondary: '2rem',
