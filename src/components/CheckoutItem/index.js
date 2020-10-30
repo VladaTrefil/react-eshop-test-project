@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import { AiOutlineClose } from 'react-icons/ai'
 import { Cell, ThumbnailCell, RemoveButton } from './styles'
 import Thumbnail from '#/Thumbnail'
@@ -8,9 +9,13 @@ export default function CheckoutItem({ product, quantity, removeFromCart, compac
   return (
     <tr>
       <ThumbnailCell>
-        <Thumbnail src={product.images.thumbnail} />
+        <Link to={{ pathname: product.slug }}>
+          <Thumbnail src={product.images.thumbnail} />
+        </Link>
       </ThumbnailCell>
-      <Cell>{product.name}</Cell>
+      <Cell>
+        <Link to={{ pathname: product.slug }}>{product.name}</Link>
+      </Cell>
       <Cell>{quantity}</Cell>
       {!compact ? <Cell>$ {product.price}</Cell> : false}
       <Cell>$ {product.price * quantity}</Cell>
