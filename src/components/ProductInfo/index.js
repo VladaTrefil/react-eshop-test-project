@@ -1,5 +1,5 @@
 import React from 'react'
-import AddToCart from '#/AddToCart'
+import { AddToCart } from '#/CartInterface'
 import Price from '#/Price'
 import { Container, Title, Description, Row, Stock, Brand } from './styles'
 

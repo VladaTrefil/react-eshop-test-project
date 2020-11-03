@@ -15,19 +15,10 @@ export const Cell = styled.td`
   }
 `
 
-export const ThumbnailCell = styled.td`
-  width: 120px;
+export const QuantityHolder = styled.div`
+  width: 80px;
 `
 
-export const RemoveButton = styled.button`
-  display: flex;
-  padding: 5px;
-  background: ${({ theme }) => theme.colors.dark};
-  color: ${({ theme }) => theme.colors.light};
-  transition: background 300ms, color 300ms;
-
-  &:hover {
-    background: ${({ theme }) => theme.colors.red};
-    color: ${({ theme }) => theme.colors.light};
-  }
+export const ThumbnailCell = styled.td`
+  width: 120px;
 `

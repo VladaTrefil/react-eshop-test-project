@@ -1,61 +1,66 @@
-import PRODUCTS from "~/data/products";
+import PRODUCTS from '~/data/products'
 
 export const addToCart = ({ id, quantity }, cart) => {
-  const product = PRODUCTS.filter((product) => product.id === id)[0];
-  let newCart = [];
+  const item = cart ? cart.find((item) => item.product.id === id) : false
+  const finalQuantity = item ? item.quantity + quantity : quantity
+  const product = PRODUCTS.find((product) => product.id === id)
+  let newCart = []
 
-  if (!cart.filter((entry) => entry.product.id === product.id).length) {
-    newCart = [{ product, quantity: quantity }, ...cart];
+  if (!item) {
+    newCart = [{ product, quantity: quantity }, ...cart]
   } else {
-    newCart = cart.map((entry) =>
-      entry.product.id === product.id
-        ? Object.assign(entry, { quantity: entry.quantity + quantity })
-        : entry
-    );
+    newCart = changeItemQuantity({ id, newQuantity: finalQuantity }, cart)
   }
 
-  return newCart;
-};
+  return newCart
+}
 
 export const removeFromCart = ({ id, removeQuantity }, cart) => {
-  const targetEntry = cart.find((entry) => entry.product.id === id);
-  if (!targetEntry) return;
-
-  const targetProduct = targetEntry.product;
-
   const newCart = cart
     .map(({ product, quantity }) => {
-      if (product.id !== targetProduct.id) {
-        return { product, quantity };
+      if (product.id !== id) {
+        return { product, quantity }
       } else {
         if (quantity > removeQuantity) {
-          return { product, quantity: quantity - removeQuantity };
+          return { product, quantity: quantity - removeQuantity }
         }
       }
 
-      return null;
+      return null
     })
-    .filter((entry) => entry);
+    .filter((entry) => entry)
 
-  return newCart;
-};
+  return newCart
+}
+
+export const changeItemQuantity = ({ id, newQuantity }, cart) => {
+  const newCart = cart
+    .map(({ product, quantity }) => {
+      if (product.id !== id) {
+        return { product, quantity }
+      } else {
+        return { product, quantity: newQuantity }
+      }
+    })
+    .filter((entry) => entry)
+
+  return newCart
+}
 
 export const getCartSubtotal = (cart) => {
-  if (cart.length) {
-    return cart
-      .map(({ product, quantity }) => product.price * quantity)
-      .reduce((a, b) => a + b);
+  if (cart && cart.length) {
+    return cart.map(({ product, quantity }) => product.price * quantity).reduce((a, b) => a + b)
   } else {
-    return 0;
+    return 0
   }
-};
+}
 
 export const getCartSize = (cart) => {
-  if (cart.length) {
-    let cartSize = 0;
-    cart.map(({ product, quantity }) => (cartSize += quantity));
-    return cartSize;
+  if (cart && cart.length) {
+    let cartSize = 0
+    cart.map(({ product, quantity }) => (cartSize += quantity))
+    return cartSize
   } else {
-    return 0;
+    return 0
   }
-};
+}

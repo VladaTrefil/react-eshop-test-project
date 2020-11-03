@@ -45,9 +45,17 @@ const icon = css`
   }
 `
 
+const errorMessage = css`
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 5px;
+  color: ${theme.colors.red};
+`
+
 export default {
   wrapper,
   pageTitle,
   button,
   icon,
+  errorMessage,
 }

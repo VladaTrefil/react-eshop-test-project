@@ -22,7 +22,7 @@ const CartSidebar = ({ isOpen, closeCartSidebar }) => {
       <Inner>
         <Top>
           <Heading>Cart ({cartSize})</Heading>
-          <CheckoutTable compact={true} />
+          {cart.length > 0 ? <CheckoutTable compact={true} /> : <h2>Cart is empty</h2>}
         </Top>
         <Bottom>
           <SubTotal />

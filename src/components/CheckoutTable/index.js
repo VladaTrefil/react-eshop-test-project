@@ -7,28 +7,19 @@ import CheckoutItem from '#/CheckoutItem'
 const CheckoutTable = ({ compact = false }) => {
   const [{ cart }, dispach] = useUserState()
 
-  const removeFromCart = (id, removeQuantity) => {
-    dispach({
-      type: 'REMOVE_FROM_CART',
-      product: { id, removeQuantity },
-    })
+  if (cart) {
+    return (
+      <Table>
+        <Body>
+          {cart.map(({ product, quantity }) => (
+            <CheckoutItem key={product.id} product={product} quantity={quantity} compact={compact} />
+          ))}
+        </Body>
+      </Table>
+    )
+  } else {
+    return false
   }
-
-  return (
-    <Table>
-      <Body>
-        {cart.map(({ product, quantity }) => (
-          <CheckoutItem
-            key={product.id}
-            product={product}
-            quantity={quantity}
-            removeFromCart={removeFromCart}
-            compact={compact}
-          />
-        ))}
-      </Body>
-    </Table>
-  )
 }
 
 export default CheckoutTable

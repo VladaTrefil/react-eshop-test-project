@@ -1,19 +1,18 @@
-import React, { useState } from 'react'
+import React from 'react'
+import { Container, Input } from './styles'
+import IconButton from './button'
 import { FaMinus, FaPlus } from 'react-icons/fa'
-import { Container, Input, Button, Icon } from './styles'
 
-const NumberInput = ({ max, setParentValue }) => {
-  const [value, setValue] = useState(0)
-
+const NumberInput = ({ min = 1, max, value = 1, updateChanges }) => {
   const updateValue = (newValue) => {
-    if (newValue >= 0 && newValue <= max) {
-      setValue(newValue)
-      setParentValue(newValue)
+    if (newValue >= min && newValue <= max) {
+      updateChanges(newValue)
     }
   }
 
   const handleInputChange = (event) => {
-    const newValue = event.target.value
+    if (!event.target) return
+    const newValue = parseInt(event.target.value)
     updateValue(newValue)
   }
 
@@ -29,17 +28,13 @@ const NumberInput = ({ max, setParentValue }) => {
 
   return (
     <Container>
-      <Button onClick={decrement}>
-        <Icon>
-          <FaMinus />
-        </Icon>
-      </Button>
+      <IconButton onClick={decrement} isDisabled={value <= min}>
+        <FaMinus />
+      </IconButton>
       <Input value={value} onChange={handleInputChange} />
-      <Button onClick={increment}>
-        <Icon>
-          <FaPlus />
-        </Icon>
-      </Button>
+      <IconButton onClick={increment} isDisabled={value >= max}>
+        <FaPlus />
+      </IconButton>
     </Container>
   )
 }
