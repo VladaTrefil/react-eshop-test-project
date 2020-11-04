@@ -5,7 +5,6 @@ const reset = `
     box-sizing: border-box;
   }
 
-
   a {
     text-decoration: none;
     color: inherit;
@@ -62,6 +61,6 @@ const reset = `
     padding: 0;
     margin: 0;
   }
-`;
+`
 
-export default reset;
+export default reset
