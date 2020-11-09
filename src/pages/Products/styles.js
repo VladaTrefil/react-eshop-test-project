@@ -9,5 +9,7 @@ export const PageTitle = styled.div`
 `
 
 export const FilterHolder = styled.div`
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+  border-bottom: 4px solid ${({ theme }) => theme.colors.subtleLight};
+  padding: 10px;
 `
