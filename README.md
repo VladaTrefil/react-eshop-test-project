@@ -1,1 +1,1 @@
-webpack-react
+Simple react eshop app.
